@@ -2,23 +2,33 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import "./App.css";
 
 // Importar imágenes Step by Step (Web)
-import stepbystep4 from "./assets/img/stepbystep/2026-05-19-041342_1920x973_scrot.png";
-import stepbystep5 from "./assets/img/stepbystep/2026-05-19-041354_1920x967_scrot.png";
-import stepbystep7 from "./assets/img/stepbystep/2026-05-19-041429_1920x970_scrot.png";
+import stepbystep1 from "./assets/img/stepbystep/2026-05-19-041342_1920x973_scrot.png";
+import stepbystep2 from "./assets/img/stepbystep/2026-05-19-041354_1920x967_scrot.png";
+import stepbystep3 from "./assets/img/stepbystep/2026-05-19-041429_1920x970_scrot.png";
+import stepbystep4 from "./assets/img/stepbystep/2026-05-19-204452_1920x756_scrot.png";
+import stepbystep5 from "./assets/img/stepbystep/2026-05-19-204507_1920x781_scrot.png";
+import stepbystep6 from "./assets/img/stepbystep/2026-05-19-204521_1920x967_scrot.png";
+import stepbystep7 from "./assets/img/stepbystep/2026-05-19-204538_1920x967_scrot.png";
 
-// Importar imágenes Step by Step Mobile (vertical)
-import helpdeskstart from "./assets/img/stepbystep-movil/start.jpeg";
-import helpdesklogin from "./assets/img/stepbystep-movil/login.jpeg";
-import helpdesklogin2 from "./assets/img/stepbystep-movil/login2.jpeg";
-import helpdeskobjectives from "./assets/img/stepbystep-movil/objetivos.jpeg";
-import helpdeskcalendar from "./assets/img/stepbystep-movil/calendario.jpeg";
-import helpdeskcontract from "./assets/img/stepbystep-movil/contrato.jpeg";
-import helpdesklever from "./assets/img/stepbystep-movil/lever.jpeg";
-import helpdeskschedule from "./assets/img/stepbystep-movil/preferencias horario.jpeg";
-import helpdesknotification from "./assets/img/stepbystep-movil/notificacion push internal.jpeg";
-import helpdesku1 from "./assets/img/stepbystep-movil/619b345e-8ed9-49fe-9fd4-fdc9bdc9be29.jpeg";
-import helpdesku2 from "./assets/img/stepbystep-movil/63de98e5-8049-4511-bd91-c5e5dbbfd49f.jpeg";
-import helpdesku3 from "./assets/img/stepbystep-movil/d6923aba-00a0-4416-9aab-280be28ae0e7.jpeg";
+// Importar imágenes HelpLink
+import helplink1 from "./assets/img/helplink/help link.png";
+import helplink2 from "./assets/img/helplink/help link2.png";
+import helplink3 from "./assets/img/helplink/help link3.png";
+import helplink4 from "./assets/img/helplink/help link4.png";
+
+// Importar imágenes App Móvil Help Desk (vertical)
+import helpdesk1 from "./assets/img/stepbystep-movil/start.jpeg";
+import helpdesk2 from "./assets/img/stepbystep-movil/login.jpeg";
+import helpdesk3 from "./assets/img/stepbystep-movil/login2.jpeg";
+import helpdesk4 from "./assets/img/stepbystep-movil/objetivos.jpeg";
+import helpdesk5 from "./assets/img/stepbystep-movil/calendario.jpeg";
+import helpdesk6 from "./assets/img/stepbystep-movil/contrato.jpeg";
+import helpdesk7 from "./assets/img/stepbystep-movil/lever.jpeg";
+import helpdesk8 from "./assets/img/stepbystep-movil/preferencias horario.jpeg";
+import helpdesk9 from "./assets/img/stepbystep-movil/notificacion push internal.jpeg";
+import helpdesk10 from "./assets/img/stepbystep-movil/619b345e-8ed9-49fe-9fd4-fdc9bdc9be29.jpeg";
+import helpdesk11 from "./assets/img/stepbystep-movil/63de98e5-8049-4511-bd91-c5e5dbbfd49f.jpeg";
+import helpdesk12 from "./assets/img/stepbystep-movil/d6923aba-00a0-4416-9aab-280be28ae0e7.jpeg";
 
 // Importar imágenes Manga Dex
 import mangadex1 from "./assets/img/mangadex/453d3760-fcbb-4b8d-a33b-951cc65838a3.jpeg";
@@ -58,32 +68,44 @@ const projects = [
     desc: "Plataforma para gestion y seguimiento de habitos personales, con app movil y dashboard web para visualizacion de progreso, con sistema de notificaciones push FCM para motivar a los usuarios a cumplir sus objetivos.",
     stack: ["Fast API", "Notificaciones Push FCM", "Stripe", "React", "flutter"],
     color: "#8FA89B",
-    images: [stepbystep4, stepbystep5,  stepbystep7],
-    repo: "https://github.com/brayanalvz/",
-    live: "#",
+    images: [stepbystep1, stepbystep2, stepbystep3, stepbystep4, stepbystep5, stepbystep6, stepbystep7],
+    repo: "https://github.com/BrayanAlv/step_by_step",
+    live: "https://stepbystep.cv/",
   },
 
   {
     id: 3,
+    name: "HelpLink",
+    tag: "Full Stack",
+    desc: "Plataforma web para ubicacion y gestión de tickets de soporte, chat en vivo y base de conocimientos centralizada.",
+    stack: ["Next.js", "GraphQL", "Docker", "Kubernetes"],
+    color: "#A89B8F",
+    images: [helplink1, helplink2, helplink3, helplink4],
+    repo: "",
+    live: "#",
+  },
+
+  {
+    id: 4,
     name: "App Móvil Help Desk",
     tag: "Mobile · API",
     desc: "Aplicación móvil para gestión de incidencias y por medio de push notifications y dashboard con métricas en tiempo real.",
     stack: ["React Native", "JS", "MySQL", "Firebase FCM", "C# ASP.Net"],
     color: "#9B8FA8",
-    images: [helpdeskstart, helpdesklogin, helpdesklogin2, helpdeskobjectives, helpdeskcalendar, helpdeskcontract, helpdesklever, helpdeskschedule, helpdesknotification, helpdesku1, helpdesku2, helpdesku3],
-    repo: "https://github.com/brayanalvz/",
+    images: [helpdesk1, helpdesk2, helpdesk3, helpdesk4, helpdesk5, helpdesk6, helpdesk7, helpdesk8, helpdesk9, helpdesk10, helpdesk11, helpdesk12],
+    repo: "https://github.com/BrayanAlv/HdeskRN",
     live: "#",
   },
   {
-    id: 4,
+    id: 5,
     name: "Manga dex App",
     tag: "Front end ",
     desc: "Plataforma Web que consume API rest de MangaDex, para busqueda y lectura de manga",
     stack: ["React", "JS", "CSS"],
     color: "#8F9BA8",
     images: [mangadex1, mangadex2, mangadex3, mangadex4],
-    repo: "https://github.com/brayanalvz/",
-    live: "#",
+    repo: "https://github.com/BrayanAlv/mangadex-app",
+    live: "https://manga.brayanalvz.xyz/",
   },
 ];
 
