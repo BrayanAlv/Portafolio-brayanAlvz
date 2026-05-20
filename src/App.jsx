@@ -223,7 +223,7 @@ function About() {
                   <span className="stat-n">{n}</span>
                   <span className="stat-l">
                     {n === "Git Hub" && typeof l === "string" ? (
-                      <a href={l} target="_blank" rel="noopener noreferrer">Git Hub</a>
+                      <a href={l} target="_blank" rel="noopener noreferrer">https://github.com/BrayanAlv</a>
                     ) : l}
                   </span>
                 </div>
