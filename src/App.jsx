@@ -213,14 +213,22 @@ function About() {
                ))}
             </div>
           </div>
-           <div className="about-stats">
-             {[["Brayan Alvarez"], ["Ing.", "Desarrollo y Gestión de Software"], ["Git Hub", "https://github.com/BrayanAlv"]].map(([n, l]) => (
-                 <div key={n} className="stat">
-                   <span className="stat-n">{n}</span>
-                   <span className="stat-l">{l}</span>
-                 </div>
-             ))}
-           </div>
+            <div className="about-stats">
+              {[
+                ["Brayan Alvarez", ""],
+                ["Ing.", "Desarrollo y Gestión de Software"],
+                ["Git Hub", "https://github.com/BrayanAlv"]
+              ].map(([n, l]) => (
+                <div key={n} className="stat">
+                  <span className="stat-n">{n}</span>
+                  <span className="stat-l">
+                    {n === "Git Hub" && typeof l === "string" ? (
+                      <a href={l} target="_blank" rel="noopener noreferrer">Git Hub</a>
+                    ) : l}
+                  </span>
+                </div>
+              ))}
+            </div>
         </div>
       </section>
   );
