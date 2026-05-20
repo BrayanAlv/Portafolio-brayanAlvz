@@ -69,7 +69,7 @@ const projects = [
     stack: ["Fast API", "Notificaciones Push FCM", "Stripe", "React", "flutter"],
     color: "#8FA89B",
     images: [stepbystep1, stepbystep2, stepbystep3, stepbystep4, stepbystep5, stepbystep6, stepbystep7],
-    repo: "https://github.com/BrayanAlv/step_by_step",
+    repo: "https://github.com/BrayanAlv/step_by_stepV2",
     live: "https://stepbystep.cv/",
   },
 
