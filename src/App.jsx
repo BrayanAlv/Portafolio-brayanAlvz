@@ -94,7 +94,7 @@ const projects = [
     id: 3,
     name: "HelpDesk",
     tag: "Full Stack",
-    desc: "Plataforma web para ubicacion y gestión de tickets de soporte, chat en vivo y base de conocimientos centralizada.",
+    desc: "Plataforma web para seguimiento y gestión de tickets de soporte.",
     stack: ["React Native", "JS", "MySQL", "Firebase FCM", "C# ASP.Net"],
     color: "#A89B8F",
     images: [helplink1, helplink2, helplink3, helplink4],
