@@ -101,7 +101,7 @@ function Nav({ active }) {
   }, []);
   return (
       <nav className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
-        <span className="nav-logo">FS</span>
+        <span className="nav-logo">PortFolio Web Site</span>
         <ul className="nav-links">
           {["inicio", "sobre", "proyectos", "contacto"].map((s) => (
               <li key={s}>
@@ -148,33 +148,31 @@ function About() {
   return (
       <section id="sobre" className="about">
         <div ref={ref} className={`about-inner ${inView ? "reveal" : ""}`}>
-          <div className="about-text">
-            <span className="section-tag">01 — Sobre mí</span>
-            <h2 className="section-title">Código con<br />propósito.</h2>
-            <p>
-              Desarrollador Full Stack especializado en backend con más de 5 años
-              construyendo soluciones escalables. Me apasiona diseñar arquitecturas
-              que resuelvan problemas reales con elegancia técnica.
-            </p>
-            <p>
-              Desde sistemas de monitoreo crítico hasta aplicaciones móviles de
-              soporte, cada proyecto es una oportunidad para escribir código que
-              importe.
-            </p>
+           <div className="about-text">
+             <span className="section-tag">01 — Sobre mí</span>
+             <h2 className="section-title">Código con<br />propósito.</h2>
+             <p>
+               Desarrollo y Gestión de Software con experiencia en desarrollo de aplicaciones web, APIs REST y soluciones IoT. Con conocimientos en JavaScript, PHP, Java, Python y ASP.NET, así como en bases de datos MySQL y despliegue en entornos cloud (AWS y Google Cloud), participando en el ciclo completo de desarrollo de software.
+             </p>
+             <p>
+               <strong>EXPERIENCIA</strong><br />
+               <strong>Prestador de Servicios Externo, Agencia Digital Baja California</strong> (Nov 2024 a Dic 2025)<br />
+               Diseño, desarrollo y mantenimiento de plataformas web internas y públicas utilizando JavaScript y PHP. Integración de APIs REST y manejo de autenticación. Soporte técnico e implementación de procedimientos almacenados y triggers en bases de datos.
+             </p>
             <div className="skills-row">
-              {["Node.js", "Python", "React", "PostgreSQL", "Docker", "REST / GraphQL"].map((s) => (
-                  <span key={s} className="skill-chip">{s}</span>
-              ))}
+              {["JavaScript", "Java", "PHP", "ASP.NET", "C#", "Python", "React", "React Native", "Flutter", "MySQL", "PostgreSQL", "MongoDB", "AWS", "Google Cloud", "Docker", "REST / GraphQL"].map((s) => (
+                   <span key={s} className="skill-chip">{s}</span>
+               ))}
             </div>
           </div>
-          <div className="about-stats">
-            {[["5+", "años de experiencia"], ["10+", "proyectos entregados"], ["3", "países clientes"]].map(([n, l]) => (
-                <div key={n} className="stat">
-                  <span className="stat-n">{n}</span>
-                  <span className="stat-l">{l}</span>
-                </div>
-            ))}
-          </div>
+           <div className="about-stats">
+             {[["Brayan Alvarez"], ["Ing.", "Desarrollo y Gestión de Software"]].map(([n, l]) => (
+                 <div key={n} className="stat">
+                   <span className="stat-n">{n}</span>
+                   <span className="stat-l">{l}</span>
+                 </div>
+             ))}
+           </div>
         </div>
       </section>
   );
@@ -309,10 +307,10 @@ function Projects() {
   return (
       <>
         <section id="proyectos" className="projects">
-          <div className="projects-header">
-            <span className="section-tag">02 — Proyectos</span>
-            <h2 className="section-title">Trabajo seleccionado.</h2>
-          </div>
+           <div className="projects-header">
+             <span className="section-tag">02 — Proyectos</span>
+             <h2 className="section-title">Portfolio.</h2>
+           </div>
           <div ref={ref} className={`projects-grid ${inView ? "reveal" : ""}`}>
             {projects.map((p, i) => (
                 <article
@@ -359,48 +357,24 @@ function Contact() {
   return (
       <section id="contacto" className="contact">
         <div ref={ref} className={`contact-inner ${inView ? "reveal" : ""}`}>
-          <div className="contact-left">
-            <span className="section-tag">03 — Contacto</span>
-            <h2 className="section-title">Hablemos<br />de tu proyecto.</h2>
-            <p>Disponible para freelance y oportunidades de tiempo completo.</p>
-            <a href="mailto:hola@tuportafolio.dev" className="contact-email">
-              hola@tuportafolio.dev
-            </a>
-          </div>
-          <div className="contact-right">
-            {sent ? (
-                <div className="contact-thanks">
-                  <span>✓</span>
-                  <p>Mensaje enviado. Responderé pronto.</p>
-                </div>
-            ) : (
-                <form className="contact-form" onSubmit={handle}>
-                  <input
-                      placeholder="Nombre"
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      required
-                  />
-                  <input
-                      type="email"
-                      placeholder="Email"
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      required
-                  />
-                  <textarea
-                      placeholder="Cuéntame sobre tu proyecto..."
-                      rows={4}
-                      value={form.msg}
-                      onChange={(e) => setForm({ ...form, msg: e.target.value })}
-                      required
-                  />
-                  <button type="submit" className="btn btn--primary">
-                    Enviar mensaje
-                  </button>
-                </form>
-            )}
-          </div>
+           <div className="contact-left">
+             <span className="section-tag">03 — Contacto</span>
+             <h2 className="section-title">Conectemos<br />contigo.</h2>
+             <p>
+               <strong>Dirección:</strong><br />
+               Vicente Guerrero, Colonia Mariano Matamoros<br />
+               Tijuana, Baja California 9408
+             </p>
+             <p>
+               <strong>Teléfono:</strong><br />
+               <a href="tel:6641899448" className="contact-email">664 189 9448</a><br />
+               <a href="tel:6641220276" className="contact-email">664 122 0276</a>
+             </p>
+             <a href="mailto:brayanalvzdev@gmail.com" className="contact-email">
+               brayanalvzdev@gmail.com
+             </a>
+           </div>
+
         </div>
       </section>
   );

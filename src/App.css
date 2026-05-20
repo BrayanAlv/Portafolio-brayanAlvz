@@ -25,7 +25,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -61,7 +61,7 @@ img { display: block; max-width: 100%; }
   list-style: none;
 }
 .nav-links a {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--muted);
@@ -92,7 +92,7 @@ img { display: block; max-width: 100%; }
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border: none;
@@ -124,7 +124,7 @@ img { display: block; max-width: 100%; }
 /* ── Section base ────────────────────────────────────── */
 .section-tag {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
@@ -132,7 +132,7 @@ img { display: block; max-width: 100%; }
 }
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 400;
   line-height: 1.1;
   color: var(--white);
@@ -196,7 +196,7 @@ img { display: block; max-width: 100%; }
   animation: fadeUp 1s var(--ease) 0.2s both;
 }
 .hero-eyebrow {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
@@ -204,7 +204,7 @@ img { display: block; max-width: 100%; }
 }
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
   font-weight: 400;
   line-height: 1.05;
   color: var(--white);
@@ -213,7 +213,7 @@ img { display: block; max-width: 100%; }
 .hero-title--accent { color: var(--gold); font-style: italic; }
 .hero-sub {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 2.5rem;
   max-width: 440px;
 }
@@ -236,7 +236,7 @@ img { display: block; max-width: 100%; }
   color: var(--white);
 }
 .hero-badge small {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
@@ -260,7 +260,7 @@ img { display: block; max-width: 100%; }
   color: var(--muted);
   margin-bottom: 1rem;
   max-width: 540px;
-  font-size: 13px;
+  font-size: 15px;
 }
 .skills-row {
   display: flex;
@@ -271,7 +271,7 @@ img { display: block; max-width: 100%; }
 .skill-chip {
   padding: 0.35rem 0.85rem;
   border: 1px solid var(--border);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   color: var(--muted);
   border-radius: var(--radius);
@@ -296,7 +296,7 @@ img { display: block; max-width: 100%; }
   line-height: 1;
 }
 .stat-l {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
@@ -350,7 +350,7 @@ img { display: block; max-width: 100%; }
   margin-bottom: 1.2rem;
 }
 .card-tag {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--card-accent, var(--gold));
@@ -362,13 +362,13 @@ img { display: block; max-width: 100%; }
 }
 .card-name {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 400;
   color: var(--white);
   margin-bottom: 0.75rem;
 }
 .card-desc {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.65;
   margin-bottom: 1.2rem;
@@ -379,7 +379,7 @@ img { display: block; max-width: 100%; }
   gap: 0.4rem;
 }
 .card-stack span {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   padding: 0.2rem 0.55rem;
   border: 1px solid var(--border);
@@ -402,12 +402,12 @@ img { display: block; max-width: 100%; }
 }
 .contact-left p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 1.5rem;
 }
 .contact-email {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--gold);
   border-bottom: 1px solid var(--gold-dim);
   padding-bottom: 0.2rem;
@@ -426,7 +426,7 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--border);
   color: var(--text);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 14px;
   padding: 0.85rem 1rem;
   border-radius: var(--radius);
   outline: none;
@@ -461,7 +461,7 @@ img { display: block; max-width: 100%; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   color: var(--muted);
 }
@@ -471,7 +471,7 @@ img { display: block; max-width: 100%; }
 .card-cta {
   display: inline-block;
   margin-top: 1rem;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--card-accent, var(--gold));
@@ -524,7 +524,7 @@ img { display: block; max-width: 100%; }
 }
 .modal-tag {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--modal-accent, var(--gold));
@@ -532,7 +532,7 @@ img { display: block; max-width: 100%; }
 }
 .modal-title {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   font-weight: 400;
   color: var(--white);
 }
@@ -543,7 +543,7 @@ img { display: block; max-width: 100%; }
   width: 34px; height: 34px;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: var(--radius);
   transition: all 0.2s;
   flex-shrink: 0;
@@ -604,18 +604,18 @@ img { display: block; max-width: 100%; }
 .carousel-counter {
   position: absolute;
   bottom: 1rem; right: 1rem;
-  font-size: 10px; letter-spacing: 0.1em;
+  font-size: 12px; letter-spacing: 0.1em;
   color: rgba(255,255,255,0.4);
   z-index: 2;
 }
 .modal-body { padding: 1.5rem 2rem 2rem; }
 .modal-desc {
-  font-size: 13px; color: var(--muted);
+  font-size: 15px; color: var(--muted);
   line-height: 1.7; margin-bottom: 1.25rem; max-width: 600px;
 }
 .modal-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .modal-chip {
-  font-size: 10px; letter-spacing: 0.08em;
+  font-size: 12px; letter-spacing: 0.08em;
   padding: 0.25rem 0.6rem;
   border: 1px solid var(--border);
   color: var(--muted);
