@@ -1,6 +1,17 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import "./App.css";
 
+// Importar imágenes Guardian Angel
+import guardianangel1 from "./assets/img/guardianangel/image21.png";
+import guardianangel2 from "./assets/img/guardianangel/image22.png";
+import guardianangel3 from "./assets/img/guardianangel/image23.png";
+import guardianangel4 from "./assets/img/guardianangel/image24.png";
+import guardianangel5 from "./assets/img/guardianangel/image25.png";
+import guardianangel6 from "./assets/img/guardianangel/image26.png";
+import guardianangel7 from "./assets/img/guardianangel/image27.png";
+import guardianangel8 from "./assets/img/guardianangel/image28.png";
+import guardianangel9 from "./assets/img/guardianangel/image29.png";
+
 // Importar imágenes Step by Step (Web)
 import stepbystep1 from "./assets/img/stepbystep/2026-05-19-041342_1920x973_scrot.png";
 import stepbystep2 from "./assets/img/stepbystep/2026-05-19-041354_1920x967_scrot.png";
@@ -49,14 +60,20 @@ const projects = [
   {
     id: 1,
     name: "Guardian Angel",
-    tag: "Security · Full Stack",
+    tag: "Full Stack",
     desc: "Sistema de monitoreo y alertas en tiempo real, para guarderias",
     stack: ["Django", "React", "WebSockets", "PostgreSQL"],
     color: "#C8A96E",
     images: [
-      placeholderImg(0, "Guardian Angel — Dashboard"),
-      placeholderImg(1, "Guardian Angel — Mapa en vivo"),
-      placeholderImg(2, "Guardian Angel — Alertas"),
+      guardianangel1,
+      guardianangel2,
+      guardianangel3,
+      guardianangel4,
+      guardianangel5,
+      guardianangel6,
+      guardianangel7,
+      guardianangel8,
+      guardianangel9,
     ],
     repo: "https://github.com/BrayanAlv/Api-Flask-Angel-Care",
     live: "#",
@@ -78,7 +95,7 @@ const projects = [
     name: "HelpLink",
     tag: "Full Stack",
     desc: "Plataforma web para ubicacion y gestión de tickets de soporte, chat en vivo y base de conocimientos centralizada.",
-    stack: ["Next.js", "GraphQL", "Docker", "Kubernetes"],
+    stack: ["React Native", "JS", "MySQL", "Firebase FCM", "C# ASP.Net"],
     color: "#A89B8F",
     images: [helplink1, helplink2, helplink3, helplink4],
     repo: "https://github.com/BrayanAlv/HdeskRN",
@@ -90,7 +107,7 @@ const projects = [
     name: "Step by Step movil",
     tag: "Mobile · API",
     desc: "Plataforma para gestion y seguimiento de habitos personales, con app movil y dashboard web para visualizacion de progreso, con sistema de notificaciones push FCM para motivar a los usuarios a cumplir sus objetivos.",
-    stack: ["React Native", "JS", "MySQL", "Firebase FCM", "C# ASP.Net"],
+    stack: ["Fast API", "Notificaciones Push FCM", "Stripe", "React", "flutter"],
     color: "#9B8FA8",
     images: [helpdesk1, helpdesk2, helpdesk3, helpdesk4, helpdesk5, helpdesk6, helpdesk7, helpdesk8, helpdesk9, helpdesk10, helpdesk11, helpdesk12],
     repo: "",
