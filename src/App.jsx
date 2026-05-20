@@ -435,7 +435,7 @@ function Contact() {
         <div ref={ref} className={`contact-inner ${inView ? "reveal" : ""}`}>
            <div className="contact-left">
              <span className="section-tag">03 — Contacto</span>
-             <h2 className="section-title">Conectemos<br />contigo.</h2>
+             <h2 className="section-title">Conectemos</h2>
              <p>
                <strong>Dirección:</strong><br />
                Vicente Guerrero, Colonia Mariano Matamoros<br />
