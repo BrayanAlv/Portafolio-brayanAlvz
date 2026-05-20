@@ -1,6 +1,31 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import "./App.css";
 
+// Importar imágenes Step by Step (Web)
+import stepbystep4 from "./assets/img/stepbystep/2026-05-19-041342_1920x973_scrot.png";
+import stepbystep5 from "./assets/img/stepbystep/2026-05-19-041354_1920x967_scrot.png";
+import stepbystep7 from "./assets/img/stepbystep/2026-05-19-041429_1920x970_scrot.png";
+
+// Importar imágenes Step by Step Mobile (vertical)
+import helpdeskstart from "./assets/img/stepbystep-movil/start.jpeg";
+import helpdesklogin from "./assets/img/stepbystep-movil/login.jpeg";
+import helpdesklogin2 from "./assets/img/stepbystep-movil/login2.jpeg";
+import helpdeskobjectives from "./assets/img/stepbystep-movil/objetivos.jpeg";
+import helpdeskcalendar from "./assets/img/stepbystep-movil/calendario.jpeg";
+import helpdeskcontract from "./assets/img/stepbystep-movil/contrato.jpeg";
+import helpdesklever from "./assets/img/stepbystep-movil/lever.jpeg";
+import helpdeskschedule from "./assets/img/stepbystep-movil/preferencias horario.jpeg";
+import helpdesknotification from "./assets/img/stepbystep-movil/notificacion push internal.jpeg";
+import helpdesku1 from "./assets/img/stepbystep-movil/619b345e-8ed9-49fe-9fd4-fdc9bdc9be29.jpeg";
+import helpdesku2 from "./assets/img/stepbystep-movil/63de98e5-8049-4511-bd91-c5e5dbbfd49f.jpeg";
+import helpdesku3 from "./assets/img/stepbystep-movil/d6923aba-00a0-4416-9aab-280be28ae0e7.jpeg";
+
+// Importar imágenes Manga Dex
+import mangadex1 from "./assets/img/mangadex/453d3760-fcbb-4b8d-a33b-951cc65838a3.jpeg";
+import mangadex2 from "./assets/img/mangadex/7fb26c2e-66d1-42de-b27b-b2d522c606e4.jpeg";
+import mangadex3 from "./assets/img/mangadex/8f1a2068-f0a5-4011-a33c-8152c27192d6.jpeg";
+import mangadex4 from "./assets/img/mangadex/bd35c9ac-e952-48ef-bae4-c88a2fa2b3b6.jpeg";
+
 // Placeholder images using a seeded color per project slide
 function placeholderImg(seed, label) {
   const colors = ["1a1a18", "181816", "141412", "1c1c1a", "161614"];
@@ -23,6 +48,8 @@ const projects = [
       placeholderImg(1, "Guardian Angel — Mapa en vivo"),
       placeholderImg(2, "Guardian Angel — Alertas"),
     ],
+    repo: "https://github.com/brayanalvz/",
+    live: "#",
   },
   {
     id: 2,
@@ -31,50 +58,32 @@ const projects = [
     desc: "Plataforma para gestion y seguimiento de habitos personales, con app movil y dashboard web para visualizacion de progreso, con sistema de notificaciones push FCM para motivar a los usuarios a cumplir sus objetivos.",
     stack: ["Fast API", "Notificaciones Push FCM", "Stripe", "React", "flutter"],
     color: "#8FA89B",
-    images: [
-      placeholderImg(3, "Step by Step — Ruta de aprendizaje"),
-      placeholderImg(4, "Step by Step — Progreso"),
-      placeholderImg(0, "Step by Step — Perfil"),
-    ],
+    images: [stepbystep4, stepbystep5,  stepbystep7],
+    repo: "https://github.com/brayanalvz/",
+    live: "#",
   },
+
   {
     id: 3,
-    name: "HelpLink",
-    tag: "Full Stack",
-    desc: "Plataforma web para ubicacion de ",
-    stack: ["Next.js", "GraphQL", "Docker", "Kubernetes"],
-    color: "#A89B8F",
-    images: [
-      placeholderImg(2, "HelpLink — Tickets"),
-      placeholderImg(3, "HelpLink — Chat en vivo"),
-      placeholderImg(4, "HelpLink — Base de conocimientos"),
-    ],
-  },
-  {
-    id: 4,
     name: "App Móvil Help Desk",
     tag: "Mobile · API",
     desc: "Aplicación móvil para gestión de incidencias y por medio de push notifications y dashboard con métricas en tiempo real.",
     stack: ["React Native", "JS", "MySQL", "Firebase FCM", "C# ASP.Net"],
     color: "#9B8FA8",
-    images: [
-      placeholderImg(1, "Help Desk — Incidencias"),
-      placeholderImg(2, "Help Desk — Métricas"),
-      placeholderImg(3, "Help Desk — Notificaciones tipo Push FCM"),
-    ],
+    images: [helpdeskstart, helpdesklogin, helpdesklogin2, helpdeskobjectives, helpdeskcalendar, helpdeskcontract, helpdesklever, helpdeskschedule, helpdesknotification, helpdesku1, helpdesku2, helpdesku3],
+    repo: "https://github.com/brayanalvz/",
+    live: "#",
   },
   {
-    id: 5,
+    id: 4,
     name: "Manga dex App",
     tag: "Front end ",
     desc: "Plataforma Web que consume API rest de MangaDex, para busqueda y lectura de manga",
     stack: ["React", "JS", "CSS"],
     color: "#8F9BA8",
-    images: [
-      placeholderImg(4, "Mandex — Reportes"),
-      placeholderImg(0, "Mandex — Pagos"),
-      placeholderImg(1, "Mandex — Reglas de negocio"),
-    ],
+    images: [mangadex1, mangadex2, mangadex3, mangadex4],
+    repo: "https://github.com/brayanalvz/",
+    live: "#",
   },
 ];
 
@@ -166,7 +175,7 @@ function About() {
             </div>
           </div>
            <div className="about-stats">
-             {[["Brayan Alvarez"], ["Ing.", "Desarrollo y Gestión de Software"]].map(([n, l]) => (
+             {[["Ing.", "Desarrollo y Gestión de Software"], ["15+", "tecnologías dominadas"], ["1", "certificación profesional"]].map(([n, l]) => (
                  <div key={n} className="stat">
                    <span className="stat-n">{n}</span>
                    <span className="stat-l">{l}</span>
@@ -287,14 +296,26 @@ function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Info */}
-          <div className="modal-body">
-            <p className="modal-desc">{project.desc}</p>
-            <div className="modal-stack">
-              {project.stack.map((t) => (
-                  <span key={t} className="modal-chip">{t}</span>
-              ))}
-            </div>
-          </div>
+           <div className="modal-body">
+             <p className="modal-desc">{project.desc}</p>
+             <div className="modal-stack">
+               {project.stack.map((t) => (
+                   <span key={t} className="modal-chip">{t}</span>
+               ))}
+             </div>
+             <div className="modal-links">
+               {project.repo && project.repo !== "#" && (
+                   <a href={project.repo} target="_blank" rel="noopener noreferrer" className="modal-link-btn modal-link-repo">
+                     <span>→</span> Repositorio
+                   </a>
+               )}
+               {project.live && project.live !== "#" && (
+                   <a href={project.live} target="_blank" rel="noopener noreferrer" className="modal-link-btn modal-link-live">
+                     <span>→</span> Ver en vivo
+                   </a>
+               )}
+             </div>
+           </div>
         </div>
       </div>
   );
@@ -328,10 +349,18 @@ function Projects() {
                   </div>
                   <h3 className="card-name">{p.name}</h3>
                   <p className="card-desc">{p.desc}</p>
-                  <div className="card-stack">
-                    {p.stack.map((t) => <span key={t}>{t}</span>)}
-                  </div>
-                  <span className="card-cta">Ver capturas →</span>
+                   <div className="card-stack">
+                     {p.stack.map((t) => <span key={t}>{t}</span>)}
+                   </div>
+                   <div className="card-actions">
+                     <span className="card-cta" onClick={() => setSelected(p)}>Ver capturas →</span>
+                     {p.repo && p.repo !== "#" && (
+                         <a href={p.repo} target="_blank" rel="noopener noreferrer" className="card-link">Repositorio</a>
+                     )}
+                     {p.live && p.live !== "#" && (
+                         <a href={p.live} target="_blank" rel="noopener noreferrer" className="card-link">Ver en vivo</a>
+                     )}
+                   </div>
                 </article>
             ))}
           </div>

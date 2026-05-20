@@ -468,9 +468,15 @@ img { display: block; max-width: 100%; }
 
 /* ── Card clickable hint ─────────────────────────────── */
 .card { cursor: pointer; }
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .card-cta {
   display: inline-block;
-  margin-top: 1rem;
   font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -478,8 +484,31 @@ img { display: block; max-width: 100%; }
   opacity: 0;
   transform: translateX(-4px);
   transition: opacity 0.25s, transform 0.25s;
+  cursor: pointer;
 }
 .card:hover .card-cta { opacity: 1; transform: translateX(0); }
+.card-link {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--card-accent, var(--gold));
+  color: var(--card-accent, var(--gold));
+  border-radius: var(--radius);
+  transition: all 0.2s;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-4px);
+}
+.card:hover .card-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+.card-link:hover {
+  background: var(--card-accent, var(--gold));
+  color: var(--bg);
+}
 
 /* ── Modal overlay ───────────────────────────────────── */
 .modal-overlay {
@@ -557,8 +586,12 @@ img { display: block; max-width: 100%; }
   aspect-ratio: 16/9;
   background: #0a0a08;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
 }
-.carousel-track { width: 100%; height: 100%; }
+.carousel-track { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
 .carousel-track--next { animation: slideInRight 0.32s var(--ease) both; }
 .carousel-track--prev { animation: slideInLeft 0.32s var(--ease) both; }
 @keyframes slideInRight {
@@ -569,7 +602,7 @@ img { display: block; max-width: 100%; }
   from { opacity: 0; transform: translateX(-48px); }
   to   { opacity: 1; transform: translateX(0); }
 }
-.carousel-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.carousel-img { max-width: 90%; max-height: 90%; object-fit: contain; display: block; }
 .carousel-btn {
   position: absolute;
   top: 50%; transform: translateY(-50%);
@@ -613,13 +646,43 @@ img { display: block; max-width: 100%; }
   font-size: 15px; color: var(--muted);
   line-height: 1.7; margin-bottom: 1.25rem; max-width: 600px;
 }
-.modal-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.modal-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
 .modal-chip {
   font-size: 12px; letter-spacing: 0.08em;
   padding: 0.25rem 0.6rem;
   border: 1px solid var(--border);
   color: var(--muted);
   border-radius: var(--radius);
+}
+.modal-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.modal-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--modal-accent, var(--gold));
+  color: var(--modal-accent, var(--gold));
+  border-radius: var(--radius);
+  transition: all 0.2s var(--ease);
+  cursor: pointer;
+  text-decoration: none;
+}
+.modal-link-btn:hover {
+  background: var(--modal-accent, var(--gold));
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+.modal-link-btn span {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* ── Responsive ──────────────────────────────────────── */
