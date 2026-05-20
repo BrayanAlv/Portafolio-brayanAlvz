@@ -8,5 +8,14 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 3001,
     strictPort: true,
+    allowedHosts: ['manga.brayanalvz.xyz'],
+    proxy: {
+      '/api-mangadex': {
+        target: 'https://api.mangadex.org',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-mangadex/, ''),
+        secure: true,
+      },
+    },
   },
 })
