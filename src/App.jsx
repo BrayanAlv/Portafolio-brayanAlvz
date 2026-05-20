@@ -92,7 +92,7 @@ const projects = [
 
   {
     id: 3,
-    name: "HelpLink",
+    name: "HelpDesk",
     tag: "Full Stack",
     desc: "Plataforma web para ubicacion y gestión de tickets de soporte, chat en vivo y base de conocimientos centralizada.",
     stack: ["React Native", "JS", "MySQL", "Firebase FCM", "C# ASP.Net"],
@@ -214,7 +214,7 @@ function About() {
             </div>
           </div>
            <div className="about-stats">
-             {[["Brayan Alvarez"], ["Ing.", "Desarrollo y Gestión de Software"]].map(([n, l]) => (
+             {[["Brayan Alvarez"], ["Ing.", "Desarrollo y Gestión de Software"], ["Git Hub", "https://github.com/BrayanAlv"]].map(([n, l]) => (
                  <div key={n} className="stat">
                    <span className="stat-n">{n}</span>
                    <span className="stat-l">{l}</span>
