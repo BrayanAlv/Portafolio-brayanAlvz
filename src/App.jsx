@@ -214,7 +214,7 @@ function About() {
             </div>
           </div>
            <div className="about-stats">
-             {[["Ing.", "Desarrollo y Gestión de Software"], ["15+", "tecnologías dominadas"], ["1", "certificación profesional"]].map(([n, l]) => (
+             {[["Brayan Alvarez"], ["Ing.", "Desarrollo y Gestión de Software"]].map(([n, l]) => (
                  <div key={n} className="stat">
                    <span className="stat-n">{n}</span>
                    <span className="stat-l">{l}</span>
