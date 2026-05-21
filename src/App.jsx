@@ -444,7 +444,6 @@ function Contact() {
              <p>
                <strong>Teléfono:</strong><br />
                <a href="tel:6641899448" className="contact-email">664 189 9448</a><br />
-               <a href="tel:6641220276" className="contact-email">664 122 0276</a>
              </p>
              <a href="mailto:brayanalvzdev@gmail.com" className="contact-email">
                brayanalvzdev@gmail.com
